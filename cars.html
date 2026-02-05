@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarsCrud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./IMG/CarsCrud-removebg 1 (1).svg">
+</head>
+
+<body class="bg-body-tertiary">
+
+    <header class="mt-5">
+        <nav class="bg-white py-4">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <div class="d-flex align-items-center gap-2">
+                    <img src="./IMG/CarsCrud-removebg 1 (1).svg" alt="Logo">
+                    <h1 class="h4 text-primary m-0">CarsCrud</h1>
+                </div>
+
+                <img src="./IMG/Profil & Notification.svg" alt="User">
+                <button class="btn btn-outline-danger btn-sm" onclick="logout()">Logout</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+
+        <section class="bg-white p-4 rounded mb-5 position-relative d-block d-md-none">
+            <img src="./IMG/CONTENT/TOP/search-normal.svg"
+                class="position-absolute top-50 start-0 translate-middle-y ms-5" alt="search">
+            <input type="search" class="form-control ps-5" placeholder="Buscar Vehículo">
+        </section>
+
+        <section class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="card text-white p-4 h-100"
+                    style="background-image: url(./IMG/CONTENT/TOP/image.png); background-size: cover;">
+                    <h3>The Best Platform <br> for Car Rental</h3>
+                    <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+                    <button class="btn btn-primary w-25">Rental Car</button>
+                    <img src="./IMG/CONTENT/TOP/image 7.svg" class="img-fluid mt-3 ms-auto w-50" alt="Car">
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card text-white p-4 h-100"
+                    style="background-image: url(./IMG/CONTENT/TOP/image\ copy.png); background-size: cover;">
+                    <h3>The Best Platform <br> for Car Rental</h3>
+                    <p>Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+                    <button class="btn btn-info text-white w-25">Rental Car</button>
+                    <img src="./IMG/CONTENT/TOP/image 7.svg" class="img-fluid mt-3 ms-auto w-50" alt="Car">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bg-white p-4 rounded mb-5">
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+
+                <div class="position-relative flex-grow-1 d-none d-md-block">
+                    <img src="./IMG/CONTENT/TOP/search-normal.svg"
+                        class="position-absolute top-50 start-0 translate-middle-y ms-3" alt="search">
+                    <input type="search" class="form-control ps-5" placeholder="Buscar Vehículo">
+                </div>
+
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-primary" id="buttonAgregar">Agregar</button>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger" id="buttonDelete">Eliminar</button>
+                </div>
+
+            </div>
+
+            <div id="containerFromAgregar"></div>
+            <div id="containerFromEdit"></div>
+            <div id="containerFromDelete"></div>
+            
+        </section>
+
+
+        <section class="mt-5">
+            <h6 class="text-secondary mb-4">Popular Car</h6>
+        </section>
+
+        <section class="row g-4" id="containerCard">
+
+        </section>
+
+        <footer class="bg-white mt-5 pt-5">
+            <div class="container p-5">
+                <div class="row gy-4">
+                    <div class="col-lg-4 col-md-12">
+                        <h4 class="text-primary fw-bold">CarsCrud</h4>
+                        <p class="text-secondary mt-3">
+                            Our vision is to provide convenience <br>
+                            and help increase your sales business.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6" style="margin-left: 175px;">
+                        <h6 class="fw-semibold">About</h6>
+                        <ul class="list-unstyled text-secondary mt-3">
+                            <li class="mb-2">How it works</li>
+                            <li class="mb-2">Featured</li>
+                            <li class="mb-2">Partnership</li>
+                            <li>Business Relation</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <h6 class="fw-semibold">Community</h6>
+                        <ul class="list-unstyled text-secondary mt-3">
+                            <li class="mb-2">Events</li>
+                            <li class="mb-2">Blog</li>
+                            <li class="mb-2">Podcast</li>
+                            <li>Invite a friend</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <h6 class="fw-semibold">Socials</h6>
+                        <ul class="list-unstyled text-secondary mt-3">
+                            <li class="mb-2">Discord</li>
+                            <li class="mb-2">Instagram</li>
+                            <li class="mb-2">Twitter</li>
+                            <li>Facebook</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex mt-5 flex-md-row justify-content-between align-items-center pb-4">
+                    <p class=" mt-5 mb-md-0 text-dark">
+                        ©2025 crudzaso. All rights reserved
+                    </p>
+                    <div class="d-flex gap-4" style="margin-right: 95px;">
+                        <a href="#" class="text-dark text-decoration-none fw-semibold">Privacy & Policy</a>
+                        <a href="#" class="text-dark text-decoration-none fw-semibold">Terms & Condition</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./card.js"></script>
+</body>
+
+</html>
